@@ -1,9 +1,9 @@
-package org.jetbrains.plugins.template.listeners
+package com.github.lasauce6.robusta.listeners
 
 import com.intellij.openapi.components.service
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.project.ProjectManagerListener
-import org.jetbrains.plugins.template.services.MyProjectService
+import com.github.lasauce6.robusta.services.MyProjectService
 
 internal class MyProjectManagerListener : ProjectManagerListener {
 

@@ -1,6 +1,6 @@
-package org.jetbrains.plugins.template.services
+package com.github.lasauce6.robusta.services
 
-import org.jetbrains.plugins.template.MyBundle
+import com.github.lasauce6.robusta.MyBundle
 
 class MyApplicationService {
 
