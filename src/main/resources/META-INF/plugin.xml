@@ -3,6 +3,7 @@
     <id>com.github.lasauce6.robusta</id>
     <name>robusta</name>
     <vendor>lasauce6</vendor>
+    <description>Full Robusta language support for InteliJ (Code colorization, formatting, code execution, theme ...).</description>
 
     <depends>com.intellij.modules.platform</depends>
 
