@@ -1,0 +1,20 @@
+{
+  parserClass="com.github.lasauce6.robusta.parser.RobustaParser"
+
+  extends="com.intellij.extapi.psi.ASTWrapperPsiElement"
+
+  psiClassPrefix="Robusta"
+  psiImplClassSuffix="Impl"
+  psiPackage="com.github.lasauce6.robusta.psi"
+  psiImplPackage="com.github.lasauce6.robusta.psi.impl"
+
+  elementTypeHolderClass="com.github.lasauce6.robusta.psi.RobustaTypes"
+  elementTypeClass="com.github.lasauce6.robusta.psi.RobustaElementType"
+  tokenTypeClass="com.github.lasauce6.robusta.psi.RobustaTokenType"
+}
+
+simpleFile ::= item_*
+
+private item_ ::= (property|COMMENT|CRLF)
+
+property ::= (KEY? SEPARATOR VALUE?) | KEY

@@ -1,19 +1,56 @@
-<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
-    <id>com.github.lasauce6.robusta</id>
-    <name>robusta</name>
-    <vendor>lasauce6</vendor>
-    <description>Full Robusta language support for InteliJ (Code colorization, formatting, code execution, theme ...).</description>
 
-    <depends>com.intellij.modules.platform</depends>
+  <!-- Unique id for this plugin. Must stay constant for the life of the plugin. -->
+  <id>com.github.lasauce6.robusta</id>
 
-    <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.lasauce6.robusta.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.lasauce6.robusta.services.MyProjectService"/>
-    </extensions>
+  <!-- Text to display as name on Preferences/Settings | Plugin page -->
+  <name>Robusta</name>
 
-    <applicationListeners>
-        <listener class="com.github.lasauce6.robusta.listeners.MyProjectManagerListener"
-                  topic="com.intellij.openapi.project.ProjectManagerListener"/>
-    </applicationListeners>
+  <!-- Product and plugin compatibility requirements -->
+  <depends>com.intellij.modules.platform</depends>
+  <depends>com.intellij.java</depends>
+
+  <!-- Text to display as description on Preferences/Settings | Plugin page -->
+  <description>Full Robusta language support for InteliJ (Code colorization, formatting, code execution, theme ...).</description>
+
+
+  <!-- Text to display as company information on Preferences/Settings | Plugin page -->
+  <vendor>Lasauce6</vendor>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <fileType name="Robusta File" implementationClass="com.github.lasauce6.robusta.RobustaFileType" fieldName="INSTANCE"
+              language="Robusta" extensions="jvs"/>
+    <!--
+      Only required for versions of the IntelliJ Platform prior to v2019.2.
+      Use 'com.intellij.fileTypeFactory' extension point INSTEAD of above 'com.intellij.fileType'.
+      <fileTypeFactory implementation="org.intellij.sdk.language.SimpleFileTypeFactory"/>
+    -->
+
+<!--    <lang.parserDefinition language="Simple" implementationClass="org.intellij.sdk.language.SimpleParserDefinition"/>-->
+<!--    <lang.syntaxHighlighterFactory language="Simple"-->
+<!--                                   implementationClass="org.intellij.sdk.language.SimpleSyntaxHighlighterFactory"/>-->
+<!--    <colorSettingsPage implementation="org.intellij.sdk.language.SimpleColorSettingsPage"/>-->
+<!--    <annotator language="JAVA" implementationClass="org.intellij.sdk.language.SimpleAnnotator"/>-->
+<!--    <codeInsight.lineMarkerProvider language="JAVA"-->
+<!--                                    implementationClass="org.intellij.sdk.language.SimpleLineMarkerProvider"/>-->
+<!--    <completion.contributor language="Simple"-->
+<!--                            implementationClass="org.intellij.sdk.language.SimpleCompletionContributor"/>-->
+<!--    <psi.referenceContributor language="JAVA"-->
+<!--                              implementation="org.intellij.sdk.language.SimpleReferenceContributor"/>-->
+<!--    <lang.refactoringSupport language="Simple"-->
+<!--                             implementationClass="org.intellij.sdk.language.SimpleRefactoringSupportProvider"/>-->
+<!--    <lang.findUsagesProvider language="Simple"-->
+<!--                             implementationClass="org.intellij.sdk.language.SimpleFindUsagesProvider"/>-->
+<!--    <lang.foldingBuilder language="JAVA" implementationClass="org.intellij.sdk.language.SimpleFoldingBuilder"/>-->
+<!--    <gotoSymbolContributor implementation="org.intellij.sdk.language.SimpleChooseByNameContributor"/>-->
+<!--    <lang.psiStructureViewFactory language="Simple"-->
+<!--                                  implementationClass="org.intellij.sdk.language.SimpleStructureViewFactory"/>-->
+<!--    <lang.formatter language="Simple" implementationClass="org.intellij.sdk.language.SimpleFormattingModelBuilder"/>-->
+<!--    <codeStyleSettingsProvider implementation="org.intellij.sdk.language.SimpleCodeStyleSettingsProvider"/>-->
+<!--    <langCodeStyleSettingsProvider implementation="org.intellij.sdk.language.SimpleLanguageCodeStyleSettingsProvider"/>-->
+<!--    <lang.commenter language="Simple" implementationClass="org.intellij.sdk.language.SimpleCommenter"/>-->
+<!--    <lang.documentationProvider language="Simple" implementationClass="org.intellij.sdk.language.SimpleDocumentationProvider"/>-->
+
+  </extensions>
+
 </idea-plugin>
