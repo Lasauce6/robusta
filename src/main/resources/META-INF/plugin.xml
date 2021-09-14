@@ -26,9 +26,9 @@
       <fileTypeFactory implementation="org.intellij.sdk.language.SimpleFileTypeFactory"/>
     -->
 
-<!--    <lang.parserDefinition language="Simple" implementationClass="org.intellij.sdk.language.SimpleParserDefinition"/>-->
-<!--    <lang.syntaxHighlighterFactory language="Simple"-->
-<!--                                   implementationClass="org.intellij.sdk.language.SimpleSyntaxHighlighterFactory"/>-->
+    <lang.parserDefinition language="Robusta" implementationClass="com.intellij.lang.java.JavaParserDefinition"/>
+    <lang.syntaxHighlighterFactory language="Robusta"
+                                   implementationClass="com.intellij.lang.java.JavaSyntaxHighlighterFactory"/>
 <!--    <colorSettingsPage implementation="org.intellij.sdk.language.SimpleColorSettingsPage"/>-->
 <!--    <annotator language="JAVA" implementationClass="org.intellij.sdk.language.SimpleAnnotator"/>-->
 <!--    <codeInsight.lineMarkerProvider language="JAVA"-->
